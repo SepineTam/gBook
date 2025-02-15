@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "host": "books.google.com"
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "||books.google.cn/*",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    }
+  }
+]

@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "gBook",
+    "version": "1.0",
+    "description": "解决中国大陆地区点击Google book跳转到book.google.cn或book.google.hk的问题",
+    "icons": {
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "permissions": [
+      "declarativeNetRequest",
+      "declarativeNetRequestFeedback"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "declarative_net_request": {
+      "rule_resources": [{
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }]
+    },
+    "host_permissions": [
+      "*://books.google.cn/*",
+      "*://books.google.hk/*",
+      "*://books.google.com/*"
+    ]
+  }
